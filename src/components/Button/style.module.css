@@ -12,6 +12,10 @@
   border-radius: 0.25em;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .primary {
   color: #fff;
   background-color: #28a745;
