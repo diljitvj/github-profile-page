@@ -1,0 +1,10 @@
+/* Add the color here and to theme.js */
+
+:root {
+  --white: #ffffff;
+  --lightgrey: #e1e4e8;
+  --bordercolor: #929292;
+  --primary: #28a745;
+  --text-highlight: #0366d6;
+  --secondary-text: #586069;
+}

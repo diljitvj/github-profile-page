@@ -1,0 +1,11 @@
+@import url("./colors.css");
+@import url("./fonts.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+button {
+  font-family: "Open Sans", sans-serif;
+}
