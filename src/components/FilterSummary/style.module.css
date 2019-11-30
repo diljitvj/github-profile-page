@@ -1,0 +1,32 @@
+.icon {
+  width: 18px;
+  height: 18px;
+  padding: 1px;
+  margin-right: 3px;
+  fill: #fff;
+  text-align: center;
+  background-color: #6a737d;
+  border-radius: 3px;
+}
+.clearbutton {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+}
+.clearbutton:hover {
+  color: #0366d6;
+}
+.clearbutton:hover .icon {
+  background-color: #0366d6;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #e1e4e8;
+  font-size: 14px;
+}
+.summarytext {
+  display: inline-block;
+}
