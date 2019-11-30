@@ -1,0 +1,36 @@
+.paramater {
+  display: inline-flex;
+  margin-right: 15px;
+  font-size: 12px;
+  color: #586069;
+}
+.parameters {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.wrapper {
+  padding: 24px 0;
+  border-bottom: 1px solid #e1e4e8 !important;
+}
+.reponame {
+  margin: 0;
+  margin-bottom: 5px;
+}
+.reponame a {
+  color: #0366d6;
+  text-decoration: none;
+}
+.reponame a:hover {
+  text-decoration: underline;
+}
+.forkdetail {
+  font-size: 12px;
+  color: #586069;
+  margin-bottom: 4px;
+}
+.description {
+  font-size: 14px;
+  margin-bottom: 8px;
+  width: 75%;
+}

@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 
 import styles from "./style.module.css";
 
-const IconLabel = ({ Icon, label }) =>
+const IconLabel = ({ Icon, label, className }) =>
   label && (
-    <div className={styles.wrapper}>
+    <div className={clsx(className, styles.wrapper)}>
       <Icon className={styles.icon} />
       <span>{label}</span>
     </div>

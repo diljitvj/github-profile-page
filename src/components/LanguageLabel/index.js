@@ -10,9 +10,9 @@ const languageColorMap = {
   HTML: "red"
 };
 
-const LanguageLabel = ({ language }) =>
+const LanguageLabel = ({ language, className }) =>
   language && (
-    <div className={styles.wrapper}>
+    <div className={clsx(className, styles.wrapper)}>
       <span
         className={styles.badge}
         style={{
