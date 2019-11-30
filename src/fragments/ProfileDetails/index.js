@@ -2,10 +2,11 @@ import React from "react";
 import clsx from "clsx";
 
 import styles from "./style.module.css";
-import { Avatar, Button, IconLabel } from "../../components";
+import { Avatar, Button, IconLabel, ComponentLoader } from "../../components";
 import { MailIcon, LocationIcon, OrganizationIcon } from "../../icons";
 
-const ProfileDetails = ({ profile }) => {
+const ProfileDetails = ({ profile, loading }) => {
+  if (loading) return <ComponentLoader show />;
   const { avatarUrl, name, company, location, login, email, bio } = profile;
 
   return (

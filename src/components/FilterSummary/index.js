@@ -8,10 +8,11 @@ import styles from "./style.module.css";
 const FilterSummary = ({ resultCount, type, language, onClear = () => {} }) => (
   <div className={styles.wrapper}>
     <div className={styles.summarytext}>
-      <b>{resultCount}</b> result(s) for <b>{type || ""}</b> repositories{" "}
-      {language && (
+      <b>{resultCount}</b> result(s) for {type !== "all" && <b>{type}</b>}{" "}
+      repositories{" "}
+      {language !== "all" && (
         <Fragment>
-          written in <b>language</b>
+          written in <b>{language}</b>
         </Fragment>
       )}
     </div>

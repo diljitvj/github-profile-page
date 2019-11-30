@@ -4,7 +4,13 @@ import PropTypes from "prop-types";
 
 import styles from "./style.module.css";
 
-const Dropdown = ({ name = "", value, options = [], onChange = () => {} }) => {
+const Dropdown = ({
+  name = "",
+  value,
+  options = [],
+  onChange = () => {},
+  className = ""
+}) => {
   //States
   const [open, setOpen] = useState(false);
 
@@ -13,8 +19,8 @@ const Dropdown = ({ name = "", value, options = [], onChange = () => {} }) => {
     return options.find(o => o.value === value).name || "";
   };
 
-  const handleOptionChange = option => {
-    onChange(option);
+  const handleOptionChange = newValue => {
+    onChange(newValue);
     setOpen(false);
   };
 
@@ -26,8 +32,13 @@ const Dropdown = ({ name = "", value, options = [], onChange = () => {} }) => {
         })}
         onClick={setOpen.bind(null, false)}
       />
-      <div className={styles.wrapper}>
-        <span className={styles.button} onClick={setOpen.bind(null, !open)}>
+      <div className={clsx(styles.wrapper, className)}>
+        <span
+          className={clsx(styles.button, {
+            [styles.open]: open
+          })}
+          onClick={setOpen.bind(null, !open)}
+        >
           <i>{name}</i>: {getSelectedName()}{" "}
           <span className={styles.dropdowncaret} />
         </span>
@@ -41,7 +52,7 @@ const Dropdown = ({ name = "", value, options = [], onChange = () => {} }) => {
                     [styles.selected]: value === option.value
                   })}
                   key={option.value}
-                  onClick={() => handleOptionChange(option)}
+                  onClick={() => handleOptionChange(option.value)}
                 >
                   <svg
                     className={styles.tick}

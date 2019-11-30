@@ -8,11 +8,12 @@ const Button = ({
   children,
   type = "primary",
   fullWidth = false,
+  className = "",
   onClick = () => {}
 }) => (
   <button
     onClick={onClick}
-    className={clsx(styles.button, {
+    className={clsx(styles.button, className, {
       [styles.primary]: type === "primary",
       [styles.secondary]: type === "secondary",
       [styles.fullwidth]: fullWidth

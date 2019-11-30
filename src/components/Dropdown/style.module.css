@@ -39,10 +39,16 @@
   font-weight: 500;
   opacity: 0.75;
 }
-
+.button.open {
+  background-color: #e9ecef;
+  background-image: none;
+  border-color: rgba(27, 31, 35, 0.35);
+  box-shadow: inset 0 0.15em 0.3em rgba(27, 31, 35, 0.15);
+}
 .backdrop {
   display: none;
-  position: absolute;
+  z-index: 99;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -57,10 +63,13 @@
 }
 .optionswrapper {
   position: absolute;
+  z-index: 100;
+  right: 0;
   width: 300px;
   border: 1px solid #d1d5da;
   border-radius: 3px;
-  margin-top: 3px;
+  margin-top: 4px;
+  animation: translatedown 0.12s cubic-bezier(0, 0.1, 0.1, 1) backwards;
 }
 .optionsheader {
   background-color: #f6f8fa;
@@ -98,4 +107,10 @@
 }
 .option.selected:hover .tick {
   fill: white;
+}
+@keyframes translatedown {
+  0% {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
 }
