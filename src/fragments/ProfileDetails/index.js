@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 
 import styles from "./style.module.css";
 import { Avatar, Button, IconLabel, ComponentLoader } from "../../components";

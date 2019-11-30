@@ -30,7 +30,8 @@ Button.propTypes = {
     PropTypes.node
   ]).isRequired,
   type: PropTypes.oneOf(["primary", "secondary"]),
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  className: PropTypes.string
 };
 
 export default Button;

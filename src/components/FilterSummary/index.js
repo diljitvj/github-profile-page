@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { ClearIcon } from "../../icons";
@@ -23,6 +22,11 @@ const FilterSummary = ({ resultCount, type, language, onClear = () => {} }) => (
   </div>
 );
 
-FilterSummary.propTypes = {};
+FilterSummary.propTypes = {
+  resultCount: PropTypes.number.isRequired,
+  type: PropTypes.string,
+  language: PropTypes.string,
+  onClear: PropTypes.func.isRequired
+};
 
 export default FilterSummary;

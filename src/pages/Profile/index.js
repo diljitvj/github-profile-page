@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Tabs } from "antd";
-import styles from "./style.module.css";
 
+import styles from "./style.module.css";
 import Repositories from "./Repositories";
 import { ProfileDetails } from "../../fragments";
 import { fetchProfileDetails, fetchRepositories } from "../../redux/actions";
+
 const { TabPane } = Tabs;
+
 const Profile = () => {
   const dispatch = useDispatch();
 
@@ -34,10 +36,7 @@ const Profile = () => {
         <Tabs defaultActiveKey="2" size="default" animated={false}>
           <TabPane tab="Overview" key="1"></TabPane>
           <TabPane tab="Repositories" key="2">
-            <Repositories
-              repositories={repositories.data}
-              loading={repositories.loading}
-            />
+            <Repositories repositories={repositories.data} />
           </TabPane>
           <TabPane tab="Projects" key="3"></TabPane>
           <TabPane tab="Stars" key="4"></TabPane>
@@ -48,7 +47,5 @@ const Profile = () => {
     </div>
   );
 };
-
-Profile.prototypes = {};
 
 export default Profile;

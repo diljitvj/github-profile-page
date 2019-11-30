@@ -10,7 +10,7 @@ const languageColorMap = {
   HTML: "red"
 };
 
-const LanguageLabel = ({ language, className }) =>
+const LanguageLabel = ({ language, className = "" }) =>
   language && (
     <div className={clsx(className, styles.wrapper)}>
       <span
@@ -24,7 +24,8 @@ const LanguageLabel = ({ language, className }) =>
   );
 
 LanguageLabel.propTypes = {
-  language: PropTypes.string
+  language: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default LanguageLabel;

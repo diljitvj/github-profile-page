@@ -44,7 +44,7 @@ const Dropdown = ({
         </span>
         {open && (
           <div className={styles.optionswrapper}>
-            <div className={styles.optionsheader}>Select type</div>
+            <div className={styles.optionsheader}>Select {name}</div>
             <div className={styles.optionslist}>
               {options.map(option => (
                 <div
@@ -81,7 +81,9 @@ const Dropdown = ({
 Dropdown.propTypes = {
   name: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  options: PropTypes.array
+  options: PropTypes.array,
+  className: PropTypes.string,
+  onChange: PropTypes.func
 };
 
 export default Dropdown;

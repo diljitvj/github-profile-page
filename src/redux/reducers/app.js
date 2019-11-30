@@ -1,8 +1,10 @@
 import {
   FETCH_PROFILE_DETAILS_SUCCESS,
   FETCH_REPOSITORIES_SUCCESS,
-  SET_FILTER,
-  CLEAR_FILTER
+  FETCH_PROFILE_DETAILS_ERROR,
+  FETCH_PROFILE_DETAILS_LOADING,
+  FETCH_REPOSITORIES_ERROR,
+  FETCH_REPOSITORIES_LOADING
 } from "../actions/names";
 
 const initialState = {
@@ -13,16 +15,27 @@ const initialState = {
   repositories: {
     data: [],
     loading: true
-  },
-  filter: {
-    searchText: "",
-    type: "all",
-    language: "all"
   }
 };
 
 const app = (state = initialState, action) => {
   switch (action.type) {
+    case FETCH_PROFILE_DETAILS_LOADING:
+      return {
+        ...state,
+        profile: {
+          ...state.profile,
+          loading: true
+        }
+      };
+    case FETCH_REPOSITORIES_LOADING:
+      return {
+        ...state,
+        repositories: {
+          ...state.repositories,
+          loading: true
+        }
+      };
     case FETCH_PROFILE_DETAILS_SUCCESS: {
       const { data } = action;
       const {
@@ -89,20 +102,8 @@ const app = (state = initialState, action) => {
         }
       };
     }
-    case SET_FILTER:
-      return {
-        ...state,
-        filter: {
-          ...action.data
-        }
-      };
-    case CLEAR_FILTER:
-      return {
-        ...state,
-        filter: {
-          ...initialState.filter
-        }
-      };
+    case FETCH_REPOSITORIES_ERROR:
+    case FETCH_PROFILE_DETAILS_ERROR:
     default:
       return state;
   }

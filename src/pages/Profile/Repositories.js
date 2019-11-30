@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import { debounce } from "lodash";
-import styles from "./style.module.css";
+import PropTypes from "prop-types";
+
+import { Search, Dropdown, FilterSummary, Button } from "../../components";
 import { TYPES, LANGUAGES } from "../../constants";
-import {
-  ComponentLoader,
-  Search,
-  Dropdown,
-  FilterSummary,
-  Button
-} from "../../components";
 import { RepositoryDetail } from "../../fragments";
 import { RepositoryIcon } from "../../icons";
+import styles from "./style.module.css";
 
 const initialFilterValue = {
   searchText: "",
@@ -79,10 +74,14 @@ const Repositories = ({ repositories }) => {
         </div>
       )}
       {filteredRepositories.map(repository => (
-        <RepositoryDetail repository={repository} />
+        <RepositoryDetail repository={repository} key={repository.name} />
       ))}
     </div>
   );
+};
+
+Repositories.prototypes = {
+  repositories: PropTypes.array.isRequired
 };
 
 export default Repositories;

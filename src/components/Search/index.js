@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 import styles from "./style.module.css";
@@ -22,7 +22,10 @@ const Search = ({
 );
 
 Search.propTypes = {
-  fullWidth: PropTypes.bool
+  fullWidth: PropTypes.bool,
+  placeholder: PropTypes.string,
+  value: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default Search;

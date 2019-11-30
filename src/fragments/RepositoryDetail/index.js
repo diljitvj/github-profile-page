@@ -1,6 +1,5 @@
 import React from "react";
 import moment from "moment";
-import PropTypes from "prop-types";
 
 import { LanguageLabel, IconLabel } from "../../components";
 import { LicenseIcon, ForkIcon } from "../../icons";
@@ -51,7 +50,5 @@ const RepositoryDetail = ({ repository }) => {
     </div>
   );
 };
-
-RepositoryDetail.propTypes = {};
 
 export default RepositoryDetail;
