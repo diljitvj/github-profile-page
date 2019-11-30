@@ -3,7 +3,7 @@ import React, { useState, Fragment } from "react";
 import PropTypes from "prop-types";
 
 import styles from "./style.module.css";
-import { DownCaretIcon } from "../../icons";
+import { TickIcon } from "../../icons";
 
 const Dropdown = ({
   name = "",
@@ -55,7 +55,7 @@ const Dropdown = ({
                   key={option.value}
                   onClick={() => handleOptionChange(option.value)}
                 >
-                  <DownCaretIcon className={styles.tick} />
+                  <TickIcon className={styles.tick} />
                   {option.name}
                 </div>
               ))}

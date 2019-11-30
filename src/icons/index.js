@@ -1,6 +1,6 @@
 import React from "react";
 
-export const DownCaretIcon = ({ className }) => (
+export const TickIcon = ({ className }) => (
   <svg
     className={className}
     viewBox="0 0 12 16"
@@ -15,6 +15,7 @@ export const DownCaretIcon = ({ className }) => (
     ></path>
   </svg>
 );
+
 export const RepositoryIcon = ({ className }) => (
   <svg
     className={className}
