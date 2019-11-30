@@ -1,0 +1,21 @@
+.biowrapper {
+  padding: 16px 0;
+  border-bottom: 1px solid #e1e4e8 !important;
+}
+.biowrapper .bio {
+  font-size: 14px;
+  margin-bottom: 16px;
+  color: #586069;
+}
+.header .name {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.header .login {
+  font-size: 20px;
+  color: #586069;
+}
+.detailswrapper {
+  padding: 16px 0;
+}
