@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Code Style](https://img.shields.io/badge/Code%20Style-Prettier-%23ff69b4.svg)](https://prettier.io/) [![Storybook](https://cdn.jsdelivr.net/gh/storybooks/brand@master/badge/badge-storybook.svg)](https://storybook.js.org/)
 
 ## Available Scripts
 
