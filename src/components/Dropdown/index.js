@@ -40,6 +40,7 @@ const Dropdown = ({ name = "", value, options = [], onChange = () => {} }) => {
                   className={clsx(styles.option, {
                     [styles.selected]: value === option.value
                   })}
+                  key={option.value}
                   onClick={() => handleOptionChange(option)}
                 >
                   <svg
@@ -51,7 +52,7 @@ const Dropdown = ({ name = "", value, options = [], onChange = () => {} }) => {
                     aria-hidden="true"
                   >
                     <path
-                      fill-rule="evenodd"
+                      fillRule="evenodd"
                       d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"
                     ></path>
                   </svg>
@@ -69,10 +70,7 @@ const Dropdown = ({ name = "", value, options = [], onChange = () => {} }) => {
 Dropdown.propTypes = {
   name: PropTypes.string,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  options: PropTypes.arrayOf({
-    name: PropTypes.string,
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-  })
+  options: PropTypes.array
 };
 
 export default Dropdown;
