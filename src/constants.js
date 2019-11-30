@@ -2,10 +2,6 @@ export const TYPES = [
   {
     name: "All",
     value: "all"
-  },
-  {
-    name: "Public",
-    value: "public"
   }
 ];
 

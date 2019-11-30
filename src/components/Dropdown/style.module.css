@@ -114,3 +114,20 @@
     transform: translateY(-16px);
   }
 }
+@media (max-width: 767px) {
+  .wrapper {
+    position: unset;
+  }
+  .optionswrapper {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    margin: 0 auto;
+    width: calc(100% - 20px);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .backdrop {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}

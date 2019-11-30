@@ -33,8 +33,11 @@ const Repositories = ({ repositories }) => {
     filter.type !== initialFilterValue.type ||
     filter.language !== initialFilterValue.language;
 
-  const filteredRepositories = repositories.filter(
-    r => r.name.toLowerCase().indexOf(filter.searchText.toLowerCase()) !== -1
+  const filteredRepositories = repositories.filter(r =>
+    r.name.toLowerCase().indexOf(filter.searchText.toLowerCase()) !== -1 &&
+    filter.language !== "all"
+      ? r.language === filter.language
+      : true
   );
 
   return (

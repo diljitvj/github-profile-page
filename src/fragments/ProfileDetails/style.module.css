@@ -1,6 +1,6 @@
 .biowrapper {
   padding: 16px 0;
-  border-bottom: 1px solid #e1e4e8 !important;
+  border-bottom: 1px solid #e1e4e8;
 }
 .biowrapper .bio {
   font-size: 14px;
@@ -18,4 +18,25 @@
 }
 .detailswrapper {
   padding: 16px 0;
+}
+
+@media (max-width: 767px) {
+  .header {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 15px;
+  }
+  .biowrapper .buttonwrapper {
+    display: none;
+  }
+  .biowrapper .bio {
+    margin-bottom: 0;
+  }
+  .biowrapper {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .detailswrapper {
+    padding-top: 0;
+  }
 }
