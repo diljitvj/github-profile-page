@@ -1,0 +1,9 @@
+.wrapper {
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  color: #586069;
+}
+.icon {
+  margin-right: 3px;
+}
