@@ -3,6 +3,7 @@ import React, { useState, Fragment } from "react";
 import PropTypes from "prop-types";
 
 import styles from "./style.module.css";
+import { DownCaretIcon } from "../../icons";
 
 const Dropdown = ({
   name = "",
@@ -54,19 +55,7 @@ const Dropdown = ({
                   key={option.value}
                   onClick={() => handleOptionChange(option.value)}
                 >
-                  <svg
-                    className={styles.tick}
-                    viewBox="0 0 12 16"
-                    version="1.1"
-                    width="12"
-                    height="16"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"
-                    ></path>
-                  </svg>
+                  <DownCaretIcon className={styles.tick} />
                   {option.name}
                 </div>
               ))}
