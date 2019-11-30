@@ -6,19 +6,20 @@ import RepositoryDetail from ".";
 import "../../styles/common.css";
 
 storiesOf("Fragments|RepositoryDetail", module).add("Basic", () => {
+  const repository = {
+    name: "repository-name",
+    description: "🚀✨ Help beginners contribute to open source projects",
+    fork: true,
+    url: "#",
+    forks: 32222,
+    language: "HTML",
+    license: { name: "MIT License" },
+    updatedOn: new Date(),
+    homepage: "forked-from/forked-from"
+  };
   return (
     <div>
-      <RepositoryDetail
-        name="repository-name"
-        description="🚀✨ Help beginners contribute to open source projects"
-        fork
-        forks="32,222"
-        language="HTML"
-        license="MIT License"
-        updatedOn={new Date()}
-        homepage="forked-from/forked-from"
-        url=""
-      />
+      <RepositoryDetail repository={repository} />
     </div>
   );
 });

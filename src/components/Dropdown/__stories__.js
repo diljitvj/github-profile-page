@@ -7,7 +7,7 @@ import "../../styles/common.css";
 
 storiesOf("Components", module).add("Dropdown", () => {
   return (
-    <div>
+    <div style={{ paddingLeft: "200px" }}>
       <Dropdown
         name="Type"
         value="public"
